@@ -35,12 +35,20 @@ def get_last_close(prices):
     return float(prices[-1]["close"])
 
 
+def get_first_date(prices):
+    return prices[0]["date"]
+
+def get_last_date(prices):
+    return prices[-1]["date"]
+
 def display_market_summary(asset, prices, show_currency=True):
     first_close = get_first_close(prices)
     last_close = get_last_close(prices)
 
     print(f"{asset['ticker']} - {asset['name']}")
     print(f"Observations : {len(prices)}")
+    print(f"First date   : {get_first_date(prices)}")
+    print(f"Last date    : {get_last_date(prices)}")
     print(
         "First close  : "
         + f"{first_close:.2f}"
