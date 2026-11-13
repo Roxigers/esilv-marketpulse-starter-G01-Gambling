@@ -46,6 +46,7 @@ def get_last_date(prices):
 def display_market_summary(asset, prices, show_currency=True):
     suffix = f" {asset['currency']}" if show_currency else ""
     print(f"{asset['ticker']} - {asset['name']}")
+    print(f"Market       : {asset['market']}")
     print(f"Observations : {len(prices)}")
     print(f"First date   : {get_first_date(prices)}")
     print(f"Last date    : {get_last_date(prices)}")
