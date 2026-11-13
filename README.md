@@ -194,6 +194,20 @@ Terminal:
 python src/main.py
 ```
 
+
+### Running MarketPulse on macOS
+
+On macOS, the `python` command may not be available. In this case, use:
+
+```bash
+python3 src/main.py
+```
+
+Run this command from the root directory of the project, not from the `src` folder.
+
+MarketPulse uses relative paths to load sample data from `data/sample`. Running the application from the wrong directory may cause a `FileNotFoundError`.
+
+
 Dashboard, introduced in TD11:
 
 ```bash
